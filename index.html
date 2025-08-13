@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="cruds.css">
+        <title>product management system</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A simple product management system to create, read, update, and delete products with a user-friendly interface.">
+        <meta name="keywords" content="product management, CRUD, create, read, update. delete, product system">
+
+
+</head>
+<body>
+
+        <section class="crud">
+
+                <div class="head">
+                        <h2>cruds</h2>
+                        <p>product management system</p>
+                </div>
+
+
+
+
+               <div class="inputs">
+                <input type="text" id="title" placeholder="title">
+                       <div class="price">
+                           <input   onkeyup="getTotal()"   type="number" id="price"   placeholder="price">
+                          <input    onkeyup="getTotal()"       type="number" id="taxes"   placeholder="taxes">
+                           <input   onkeyup="getTotal()"      type="number" id="ads"   placeholder="ads">
+                           <input    onkeyup="getTotal()"    type="number" id="discount"   placeholder="discount">
+                        <small      id="total"></small>
+                        </div>
+                <input type="number" id="count" placeholder="count">
+                <input type="text" id="category" placeholder="category">
+                <button id="submit">Create</button>
+
+               </div>
+
+
+
+
+                <div class="outputs">
+                        <div class="searchBlock">
+                                        <div class="group">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                                        <g>
+                                        <path
+                                                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                                        ></path>
+                                        </g>
+                                        </svg>
+                                        <input onkeyup="searchData(this.value )"  class="search"  type="search"  id="search" placeholder="Search..."    name="searchbar">
+                                        </div>
+                                         <div class="btnSearch">
+                                      <button onclick="getSearchMood(this.id )"class="sear Title" id="searchTitle"> </button>
+                                       <button onclick="getSearchMood( this.id)"class="sear Category" id="searchCategory"></button>
+                                    </div>
+                        </div>
+                        <div id="deleteAll"></div>
+                        <table>
+                                
+                                <tbody id="tbody">
+                                        <tr>
+                                                <td>1</td>
+                                                <td>iphone</td>
+                                                <td>$1500</td>
+                                                <td>100</td>
+                                                <td>50</td>
+                                                <td>80</td>
+                                                <td>1700</td>
+                                                <td>phone</td>
+                                                <td><button id="update">update</button></td>
+                                                <td><button id="delete">delete</button></td>
+
+
+                                        </tr>
+                                </tbody>
+                        </table>
+                </div>
+
+           
+        </section>
+                <script src="cruds.js"></script>
+
+</body>
+</html>
+

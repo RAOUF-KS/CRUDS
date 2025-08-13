@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+ 
+ * {
+    margin: 0;
+    padding:0 ;
+ 
+ }  
+ body{
+      background-color: black;
+      color: aliceblue;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+
+ .crud{
+        width: 80%;
+        margin: auto;
+ }
+
+ .head{
+        text-align: center;
+        text-transform: uppercase;
+        margin: 10px 0;
+ }
+
+ input{
+  font: 0.95em 'popins';
+  font-weight: 200;
+       width: 100%;
+       height: 40px;
+       outline: none;
+       border: none;
+       color: antiquewhite;
+       margin: 12px 0;
+       border-radius: 1em;
+       padding: 4px ;
+         justify-content: space-between;
+           background-color: #16171d;
+             padding-left: 12px;
+
+           
+
+
+ }
+ input::placeholder {
+  color: #b2b2b6;
+  font-family: "Montserrat", sans-serif;
+
+  
+}
+ input:focus{
+    transform: scale(1.01);
+       background-color: rgb(32, 31, 31);
+
+ }
+ .price input{
+       width: 20%;
+       margin: 10px 2px;
+
+
+       
+ }
+
+ #total{
+ padding: 7px 0.5em;
+ border-radius: 5px;
+ }
+
+ #total::before{
+  content: 'Total : ';
+ }
+
+ button{
+       width: 100%;
+       height: 30px;
+       border: none;
+       cursor: pointer;
+       color: rgb(255, 255, 255);
+       border-radius: 20px;
+         background-color: #000000;
+
+ }
+  button:active{
+    transform: scale(0.9);
+  }
+
+ .btnSearch{
+       display: flex;
+       justify-content: space-between;
+ }
+
+ table{
+       width: 100%;
+       text-align: center;
+       margin: 10px 0;
+ }
+  table th{
+       text-transform:uppercase;
+  }
+  th,td{
+       padding: 5px;
+  }
+
+  
+     #submit {
+  background: transparent;
+  position: relative;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgb(0, 204, 255);
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(0, 195, 255);
+  transition: color 0.4s 0.2s ease-out;
+  text-align: center;
+  justify-content: center;
+         margin: 12px 0;
+
+
+
+}
+
+   #submit::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0em;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  border-radius:50%;
+  display: block;
+  width: 60em;
+  height: 20em;
+  left: 0em;
+  text-align: center;
+  transition: box-shadow 0.9s ease-out;
+  z-index: -1;
+}
+
+   #submit:hover {
+  color: #fff;
+  border: 1px solid rgb(0, 225, 255);
+   box-shadow: 0 0 20px rgb(0, 255, 255);
+
+}
+
+   #submit:hover::before {
+  box-shadow: inset 0em 0  0 100em rgb(0, 183, 255);
+}
+
+       #submit:active{
+       transform: scale(0.9);
+  transition-duration: .9s;
+
+     }
+
+
+
+   #delAll{
+              background-color: rgb(1, 95, 1);
+      margin: 20px 0;
+
+  }
+
+
+     #delAll {
+  background: transparent;
+  position: relative;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgb(255,0,0);
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(255,0,0);
+  transition: color 0.4s 0.2s ease-out;
+  text-align: center;
+  justify-content: center;
+
+}
+
+   #delAll::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0em;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  border-radius:50%;
+  display: block;
+  width: 60em;
+  height: 20em;
+  left: 0em;
+  text-align: center;
+  transition: box-shadow 0.9s ease-out;
+  z-index: -1;
+}
+
+   #delAll:hover {
+  color: #fff;
+  border: 1px solid rgb(255,0,0);
+   box-shadow: 0 0 20px rgb(255,0,0);
+
+}
+
+   #delAll:hover::before {
+  box-shadow: inset 0em 0  0 100em rgb(255, 0, 0);
+}
+
+       #delAll:active{
+       transform: scale(0.9);
+  transition-duration: .9s;
+
+     }
+
+
+
+  /* From Uiverse.io by vinodjangid07 */ 
+#update {
+  position: relative;
+  display: flex;
+  font-size: 17px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: flex-start;
+  height: 40px;
+  border: none;
+  padding: 20px -2px;
+  background-color: rgb(1, 95, 1);
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0px rgb(0, 43, 13);
+  transition-duration: .4s;
+  justify-content: center;
+
+}
+
+.svg {
+  width: 20px;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  fill: white;
+  transition-duration: .7s;
+}
+
+#update:hover {
+  color: transparent;
+}
+
+#update:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: .7s;
+}
+
+#update:active {
+  transform: translate(3px , 3px);
+  transition-duration: .3s;
+  box-shadow: 2px 2px 0px rgb(0, 255, 0);
+}
+
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+#delete {
+  background: transparent;
+  position: relative;
+  padding: 20px 0 ;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgb(255,0,0);
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(255,0,0);
+  transition: color 0.4s 0.2s ease-out;
+  text-align: center;
+  justify-content: center;
+
+}
+
+#delete::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -6.8em;
+  text-align: center;
+  transition: box-shadow 0.9s ease-out;
+  z-index: -1;
+}
+
+#delete:hover {
+  color: #fff;
+  border: 1px solid rgb(255,0,0);
+   box-shadow: 0 0 20px rgb(255,0,0);
+
+}
+
+#delete:hover::before {
+  box-shadow: inset 2em 0 3em 10em rgb(255, 0, 0);
+}
+
+    #delete:active{
+       transform: scale(0.9);
+  transition-duration: .9s;
+
+     }
+
+     /* From Uiverse.io by LightAndy1 */ 
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+         padding: 4px ;
+
+}
+
+.search {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 45px;
+  padding-left: 2.5rem;
+  box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+  border: 0;
+  border-radius: 12px;
+  background-color: #16171d;
+  outline: none;
+  color: #ffffff;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: text;
+  z-index: 0;
+}
+
+.search::placeholder {
+  color: #a5a5af;
+}
+
+.search:hover {
+  box-shadow: 0 0 0 2.5px  #2f303d, 0px 0px 25px -15px #51ff00;
+}
+
+.search:active {
+  transform: scale(0.95);
+}
+
+.search:focus {
+  box-shadow: 0 0 0 2.5px #0077ff;
+    transform: scale(1);
+       background-color: rgb(32, 31, 31);
+
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  fill: #bdbecb;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* From Uiverse.io by Gaurav-WebDev */ 
+.sear {
+  height: 40px;
+  width: 150px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.7s ease-in-out;
+  margin: 10px ;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+
+.sear:hover {
+     box-shadow: 0 0 20px rgb(6, 178, 190);
+
+}
+
+.Title::after {
+  content: "Title ";
+  height: 40px;
+  width: 150px;
+  background-color: #0583a3;
+  color: #ffffff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(50px);
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.7s ease-in-out;
+  border: none;
+  outline: none;
+}
+
+.Title::before {
+  content: "Search By ";
+  height: 40px;
+  width: 150px;
+  background-color: #000000;
+  color: #0099ff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0px) scale(1.2);
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.7s ease-in-out;
+  border: none;
+  outline: none;
+}
+
+.Title:hover::after {
+  transform: translateY(0) scale(1.2);
+}
+
+.Title:hover::before {
+  transform: translateY(-50px) scale(0) ;
+}
+
+.Category::after {
+  content: "Category ";
+  height: 40px;
+  width: 150px;
+  background-color: #0583a3;
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(50px);
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.7s ease-in-out;
+}
+
+.Category::before {
+  content: "Search By ";
+  height: 40px;
+  width: 150px;
+  background-color: #000000;
+  color: #0099ff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0px) scale(1.2);
+ font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.7s ease-in-out;
+}
+
+.Category:hover::after {
+  transform: translateY(0px) scale(1.2);
+}
+
+.Category:hover::before {
+  transform: translateY(-50px) scale(0) ;
+}
+
+@media (max-width: 393px) {
+  .crud {
+    width: 90%;
+    margin-left: 1em;
+  }
+
+  #title{
+    width: 90%;
+        margin-left: 1em;
+
+  }
+
+  .price input {
+    width: 30%;
+    margin: 10px 2px;
+            margin-left: 1em;
+
+  }
+
+.price #total {
+      margin-top: -100em;
+    padding: 7px 0.5em;
+    font-size: 0.9em;
+  }
+
+  input {
+    font-size: 0.9em;
+    padding-left: 8px;
+      width: 90%;
+              margin-left: 1em;
+
+  }
+ #submit{
+  width: 90%;
+          margin-left: 1em;
+
+}
+.search{
+  width: 90%;
+}
+#deleteAll{
+    width: 90%;
+       margin-bottom: 3em;
+               margin-left: 1em;
+
+}
+
+#update{
+  margin-top: 1em;
+  margin-left: -3em;
+}
+#delete{
+  margin-left: -3em;
+  margin-bottom: 2em;
+}
+
+
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+   font-size: 19.5px;
+
+  }
+  thead tr {
+    display: none;
+  }
+  td {
+    position: relative;
+    padding-left: 40%;
+    box-sizing: border-box;
+    min-height: 25px;
+    top: 20px;
+    margin-left: -1em;
+    justify-content: center;
+    align-items: center;
+  }
+  tr{
+    background-color: #cecece;
+    margin-bottom: 3em;
+    margin-left: 0.5em;
+    border-radius: 50px;
+    color: #000;
+    width: 340px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(167, 167, 167);
+box-shadow: 0 0px 15px rgba(0, 255, 179, 0.568);
+
+  }
+  td:before {
+    position: absolute;
+    left: 30px;
+    top: 4.5px;
+    white-space: nowrap;
+    content: attr(data-label);
+    font-size: 19px;
+    font-weight: 500;
+    margin-left: 4em;
+
+  }
+
+  .search-icon{
+    margin-left: 0.5em;
+  }
+
+
+
+}
