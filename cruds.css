@@ -556,11 +556,6 @@
   margin-bottom: 2em;
 }
 
-#delete:hover{
-  color: #ffffff;
-  box-shadow: inset 2em 0 3em 10em rgb(255, 0, 0);
-}
-
 
 
   table, thead, tbody, th, td, tr {
