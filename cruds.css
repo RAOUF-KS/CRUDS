@@ -557,6 +557,7 @@
 }
 
 #delete:hover{
+  color: #ffffff;
   box-shadow: inset 2em 0 3em 10em rgb(255, 0, 0);
 }
 
