@@ -321,7 +321,6 @@
   color: #fff;
   border: 1px solid rgb(255,0,0);
    box-shadow: 0 0 20px rgb(255,0,0);
-
 }
 
 #delete:hover::before {
@@ -555,6 +554,10 @@
 #delete{
   margin-left: -3em;
   margin-bottom: 2em;
+}
+
+#delete:hover{
+  box-shadow: inset 2em 0 3em 10em rgb(255, 0, 0);
 }
 
 
